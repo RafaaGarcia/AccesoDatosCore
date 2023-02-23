@@ -1,0 +1,21 @@
+﻿@model List<Empleado>
+
+    <h1>Empleados a lo bruto...</h1>
+    <a asp-controller="Empleados"
+        asp-action="IncrementarSalarioEmpleado">
+        Incrementar salario
+    </a>
+
+<ul>
+    @foreach (Empleado emp in Model)
+    {
+        <li>@emp.Apellido
+            <a asp-asp-controller="Empleados"
+                asp-action="Details"
+                asp-route-idempleado="@emp.IdEmpleado">
+                Detalles        
+            </a>
+        </li>
+
+    }
+</ul>

@@ -1,0 +1,32 @@
+﻿@model List<Plantilla>
+
+<h1>Plantilla Hospital</h1>
+
+<form method="post">
+    <label>Introduzca funcion: </label>
+    <input type="text" name="funcion"
+        class="form-control" required/>
+    <button class="btn btn-danger">
+        Buscar Empleados
+    </button>    
+</form>
+
+<table class="table table-warning">
+    <thead>
+        <tr>
+            <th>Apellido</th>
+            <th>Funcion</th>
+            <th>salario</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Plantilla plan in Model)
+        {
+            <tr>
+                <td>@plan.Apellido</td>
+                <td>@plan.Funcion</td>
+                <td>@plan.salario</td>
+            </tr>
+        } 
+    </tbody>
+</table>
